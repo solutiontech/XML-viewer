@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart XML Viewer</title>
+    <script type="module" crossorigin src="./assets/index-DzMOGF3P.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BYKV1cP_.css">
+    <style>
+      .title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e2f;
+  color: white;
+  height: 32px;
+  padding: 0 10px;
+  -webkit-app-region: drag; /* allows dragging the window */
+}
+
+.title-bar-buttons {
+  display: flex;
+  gap: 8px;
+  -webkit-app-region: no-drag; /* ensures buttons are clickable */
+}
+
+.title-bar-buttons button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  width: 32px;
+  height: 28px;
+  text-align: center;
+}
+.title-bar-buttons button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.title-bar-buttons button:active {
+  background: rgba(255, 255, 255, 0.2);       }
+  
+    </style> 
+  </head>
+  <body>
+    <div class="title-bar">
+      <div class="title-bar-drag-region" 
+   >Smart XML Explorer</div>
+      <div class="title-bar-buttons">
+      <a href="https://buymeacoffee.com/stephenbj" target="_blank" title="Support me!" style="color: white; text-decoration: none; font-size: 14px; margin-right: 10px;">☕</a>
+
+      <button onclick="window.electronAPI.sendWindowControl('minimize')">─</button>
+      <button onclick="window.electronAPI.sendWindowControl('maximize')">□</button>
+      <button onclick="window.electronAPI.sendWindowControl('close')">×</button>
+      </div>
+    </div>
+    
+   
+    <div id="root"></div>
+  </body>
+</html>
