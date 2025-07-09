@@ -1,0 +1,55 @@
+{
+  "name": "xml-viewer",
+  "version": "1.0.0",
+  "description": "A blazing-fast, feature-rich XML file explorer with smart search, multi-dimensional filters, dynamic stats, and a responsive UI — built for power users and large-scale data handling.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",   
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "in.solutiontech.xmlviewer",
+    "productName": "XML Viewer",
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "extraResources": [],
+    "mac": {
+      "target": "dmg",
+      "icon": "./dist/bj.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "./dist/bj.png"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "./dist/bj.png"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}.exe"
+    }
+  },
+  "keywords": ["xml", "viewer", "editor", "filter", "search", "electron", "offline"],
+  "author": {
+    "name": "Jerin Stephen Benedict",
+    "email": "jerin.stephen1996@gmail.com"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  }
+}
